@@ -1,3 +1,25 @@
+/* fonst */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --color-primary: #072142;
+  --color-secondary: #ff4d5a;
+  --color-gray: #828c96;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --font-montserrat: "Montserrat Alternates", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +27,132 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--color-gray);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .section > div {
+  height: 100%;
+} */
+
+.section.home .container {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.sky-color {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#072142), color-stop(#061c37), color-stop(#07182b), color-stop(#061220), to(#020b16));
+  background-image: -webkit-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
+  background-image: -o-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
+  background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
+  z-index: -200;
+}
+
+.moon-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}
+
+.moonlight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  margin: auto;
+  height: 1385px;
+  width: 1385px;
+  z-index: -1;
+}
+
+.moonlight__img {
+  background: url(./assets/vector/moonlight.svg) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  transition: ease-in-out;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+
+
+.centerContainColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.section.active .TitleSection::after {
+  transform: translateX(0);
+}
+
+/* fp-right */
+
+.fp-right {
+  top: 92.5% !important;
+  left: 50%;
+  right: initial !important;
+  transform: translateX(-50%) !important;
+}
+
+#fp-nav ul {
+  display: flex;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  border-radius: 3px !important;
+  width: 44px !important;
+  background-color: var(--color-white) !important;
+
+}
+
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  color: var(--color-white) !important;
+  width: 44px !important;
+}
+
+#fp-nav ul li a.active span {
+  background: var(--color-secondary) !important;
+  height: 9px !important;
+}
+
+.fp-tooltip {
+  margin-left: 17.5px !important;
+  margin-top: -30px;
+}
+
+@media (max-width: 570px) {
+
+  .centerContainColumn {
+    justify-content: start;
+  }
+
+}
+
+@media (max-width: 570px) {
+
+  .space-section-top {
+    padding-top: 70px !important;
+  }
+
 }

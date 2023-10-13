@@ -1,0 +1,19 @@
+.SkillSection__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}   
+
+@media screen and (max-width: 1024px){
+    .SkillSection__grid{
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px){
+    .SkillSection__grid{
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+    
+}
+

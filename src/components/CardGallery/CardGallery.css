@@ -1,0 +1,103 @@
+.CardGallery {
+    background-color: var(--color-white);
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease-in-out;
+}
+
+
+.CardGallery__img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.CardGallery:hover .CardGallery__body {
+    opacity: 1;
+}
+
+.CardGallery__body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, #072142ee, #061c37ee, #07182bee, #061220ee, #020b16ee);
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    transition: .3s ease-in-out all;
+    padding: 25px 15px;
+    overflow: hidden;
+}
+
+.CardGallery__title {}
+
+.CardGallery__description {
+    font-size: 14px;
+}
+
+.CardGallery__contentSkills {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 1rem;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.CardGallery__skill {
+    padding: 4px 8px;
+    border-radius: 3.4px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.CardGallery__appButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+.CardGallery__appButtons a {
+    margin: 0;
+}
+
+.CardGallery__link {
+    cursor: pointer;
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 6px 25px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    width: max-content;
+    margin: auto auto 0;
+    font-family: var(--font-roboto);
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all .65s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    transition-delay: .25s;
+}
+
+.CardGallery:hover .CardGallery__link {
+    opacity: 1;
+    transform: translateX(0);
+}
