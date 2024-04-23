@@ -19,6 +19,8 @@ export const CardGallery = ({ src, title, description, link, skills }) => {
                 ))}
             </ul>
           </div>
+        </div>
+        <div className="CardGallery__footer">
           {link && Array.isArray(link) ? (
             <>
               <div className="CardGallery__appButtons">

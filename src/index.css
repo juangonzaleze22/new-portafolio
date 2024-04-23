@@ -3,15 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --color-primary: #072142;
-  --color-secondary: #ff4d5a;
-  --color-gray: #828c96;
+  --color-primary: #0E46A3;
+  --color-secondary: #3c5c74;
+  --color-gray: #968285;
   --color-white: #fff;
+  --color-description: #ffffff9a;
   --color-black: #000;
+  --background-card: #75787e33;
 
   --font-montserrat: "Montserrat Alternates", sans-serif;
   --font-roboto: "Roboto", sans-serif;
-  --border-radius: 10px;
+  --border-radius: 4px;
 }
 
 * {
@@ -22,9 +24,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-montserrat);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-gray);
@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 30px;
   width: 100%;
@@ -52,10 +52,8 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#072142), color-stop(#061c37), color-stop(#07182b), color-stop(#061220), to(#020b16));
-  background-image: -webkit-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
-  background-image: -o-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
-  background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
+  background-image: radial-gradient(circle at top right, #1B3C59, #000000),
+    radial-gradient(circle at bottom left, #1B3C59, #000000);
   z-index: -200;
 }
 

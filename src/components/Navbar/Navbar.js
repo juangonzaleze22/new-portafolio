@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import "./Navbar.css";
 
 export const Navbar = () => {
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const bodyClases = document.body.className;
+    setScroll(!bodyClases.includes('fp-viewing-0'));
+  }, [document.body.className]);
+
   return (
-    <header className='navbar'>
+    <header className={`container navbar ${scroll ? 'blur' : ''}`}>
       <h3 className='navbar__NavbarBrand'>Juan Gonzalez</h3>
 
       <div className='navbar__social'>

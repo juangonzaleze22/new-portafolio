@@ -1,8 +1,7 @@
+import emailjs from "@emailjs/browser";
 import { React, useState } from "react";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { TitleSection } from "../../components/TitleSection/TitleSection";
-
 import "./Contact.css";
 
 export const Contact = () => {
@@ -15,15 +14,16 @@ export const Contact = () => {
     formState: { errors },
   } = useForm();
 
+
   const onSubmit = async values => {
     setLoading(true);
 
     try {
       const response = await emailjs.send(
-        "service_yx655mm",
-        "template_apmuq1o",
+        process.env.SERVICE_ID_EMAIL,
+        process.env.TEMPLATE_ID_EMAIL,
         values,
-        "WvRlBuMCacveCsJrT"
+        process.env.PUBLIC_KEY_EMAIL
       );
       if (response.status === 200) {
         AlertMessage("success", setAlert("Message sent successfully"));

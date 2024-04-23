@@ -1,27 +1,37 @@
 import React from "react";
-import { TitleSection } from "../../components/TitleSection/TitleSection";
 import { CardGallery } from "../../components/CardGallery/CardGallery";
+import { TitleSection } from "../../components/TitleSection/TitleSection";
 
-import ImgEstimatu from "../../assets/portfolio/img-estimatu.png";
-import ImgNotaria from "../../assets/portfolio/img-notaria.png";
-import ImgIolsi from "../../assets/portfolio/img-iolsi.png";
+import imgAilewux from "../../assets/portfolio/ailewux.png";
+import imgSagal from "../../assets/portfolio/appVentas.png";
+import imgDeliveryGo from "../../assets/portfolio/deliverygo.png";
+import imgEstimatuApp from "../../assets/portfolio/estimatuApp.png";
 import ImgEconollantas from "../../assets/portfolio/img-econollantas.png";
-import ImgImpromine from "../../assets/portfolio/img-impromine.png";
 import ImgElectroMecanic from "../../assets/portfolio/img-electromecanic.png";
 import ImgEmet from "../../assets/portfolio/img-emet-business-group.png";
 import ImgEmetBG from "../../assets/portfolio/img-emetbg.png";
-import ImgSpiffyProApp from "../../assets/portfolio/spiffyProApp.png";
+import ImgEstimatu from "../../assets/portfolio/img-estimatu.png";
+import ImgImpromine from "../../assets/portfolio/img-impromine.png";
+import ImgIolsi from "../../assets/portfolio/img-iolsi.png";
+import ImgNotaria from "../../assets/portfolio/img-notaria.png";
 import ImgSpiffyApp from "../../assets/portfolio/spiffyApp.png";
-import imgDeliveryGo from "../../assets/portfolio/deliverygo.png";
-import imgAilewux from "../../assets/portfolio/ailewux.png";
-import imgSagal from "../../assets/portfolio/appVentas.png";
-import imgEstimatuApp from "../../assets/portfolio/estimatuApp.png";
+import ImgSpiffyProApp from "../../assets/portfolio/spiffyProApp.png";
+import ImgXYES from "../../assets/portfolio/xyes.png";
+
 
 
 import "./Gallery.css";
 
 export const Gallery = () => {
   const portfolio = [
+    {
+      title: "https://xyes.com/es",
+      description:
+        "Casino application development, live betting",
+      img: ImgXYES,
+      link: "https://xyes.com/es",
+      skills: ["React", "Next", "TypeScript", "Styled-component", "React-query", "Redux"],
+    },
     {
       title: "Estimatu",
       description:
@@ -90,7 +100,7 @@ export const Gallery = () => {
     },
     {
       title: "Iolsi team",
-      description: "...",
+      description: "Landing web informative for company of health",
       img: ImgIolsi,
       link: "http://landing-oilsi.fidelitywebs.mx/",
       skills: ["HTML", "CSS", "JavaScript", "BEM"],

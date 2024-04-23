@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
 import ReactFullpage from '@fullpage/react-fullpage';
+import React, { useState } from 'react';
 
+import { Navbar } from './components/Navbar/Navbar';
+import { Contact } from './pages/Contact/Contact';
+import { Gallery } from './pages/Gallery/Gallery';
 import { Home } from './pages/Home/Home';
 import { Skill } from './pages/Skill/Skill';
-import { Navbar } from './components/Navbar/Navbar';
-import { Gallery } from './pages/Gallery/Gallery';
-import { Contact } from './pages/Contact/Contact';
 
 /* Context */
 
@@ -49,9 +49,9 @@ export const App = () => {
           );
         }}
       />
-      <div className='moonlight'>
+      {/*  <div className='moonlight'>
         <div className='layer moonlight__img' style={{ 'transform': transform }}></div>
-      </div>
+      </div> */}
       <div className='sky-color'></div>
     </div>
   )
