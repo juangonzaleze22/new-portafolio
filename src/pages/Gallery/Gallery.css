@@ -1,18 +1,10 @@
 .GallerySection {
-    padding: 40px 30px;
-    margin: 90px auto !important;
+  padding: 40px 30px;
+  margin: 90px auto !important;
 }
 
 .GallerySection__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 1rem;
-}
-
-@media screen and (max-width: 1024px) {
-
-    .GallerySection__grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem;
 }

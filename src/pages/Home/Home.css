@@ -26,9 +26,9 @@
     font-family: var(--font-roboto);
     font-size: 1.25rem;
     font-weight: 500;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+    text-wrap: balance;
 }
-
 
 .textContent__title--color {
     color: var(--color-secondary);
@@ -52,14 +52,13 @@
     font-weight: 500;
 }
 
-
 .textContent__description {
     color: var(--color-white);
     font-family: var(--font-roboto);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
-    opacity: .75;
+    opacity: 0.75;
 }
 
 .textContent__subtitle {
@@ -71,7 +70,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     .textContent {
         margin-bottom: 30px;
     }
@@ -80,11 +78,9 @@
         font-size: 5rem;
     }
 
-
-
     .home__image {
         margin: 25px auto;
-        max-width: 350px
+        max-width: 350px;
     }
 }
 
@@ -97,11 +93,9 @@
         font-size: 3rem;
     }
 
-
-
     .home__image {
         margin: 25px auto;
-        max-width: 270px
+        max-width: 270px;
     }
 }
 
@@ -110,6 +104,4 @@
         flex-direction: column;
         justify-content: center;
     }
-
-
 }

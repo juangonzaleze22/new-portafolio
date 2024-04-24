@@ -14,16 +14,18 @@ export const Contact = () => {
     formState: { errors },
   } = useForm();
 
+  console.log(" process.env",  process.env)
+
 
   const onSubmit = async values => {
     setLoading(true);
 
     try {
       const response = await emailjs.send(
-        process.env.SERVICE_ID_EMAIL,
-        process.env.TEMPLATE_ID_EMAIL,
+        process.env.REACT_APP_SERVICE_ID_EMAIL,
+        process.env.REACT_APP_TEMPLATE_ID_EMAIL,
         values,
-        process.env.PUBLIC_KEY_EMAIL
+        process.env.REACT_APP_PUBLIC_KEY_EMAIL
       );
       if (response.status === 200) {
         AlertMessage("success", setAlert("Message sent successfully"));
@@ -61,14 +63,16 @@ export const Contact = () => {
             </li>
             <li>
               <i className="bx bx-map"></i>
-              Venezuela
+              <a href="https://www.google.com/maps/place/Venezuela" target="_blank">
+                Venezuela
+              </a>
             </li>
             <li>
               <i className="bx bx-phone"></i>
               <a href="tel:+584145757263">(+58) 414-5757263</a>
             </li>
           </ul>
-          <div className="BoxInfo__Social">
+          {/* <div className="BoxInfo__Social">
             <a
               href="https://www.linkedin.com/in/juan-gonzalez-a77b93158/"
               target="_blank"
@@ -97,14 +101,13 @@ export const Contact = () => {
             >
               <i className="bx bxl-facebook"></i>
             </a>
-          </div>
+          </div> */}
           <div className="BoxInfo__footer">
             <h5>Copyright © 2022 All Rights Reserved</h5>
           </div>
         </div>
         <form className="FormContact" onSubmit={handleSubmit(onSubmit)}>
-          <TitleSection title="Contact" />
-          <h5 className="FormContact__description">Leave me a message:</h5>
+          <h5 className="FormContact__description">Drop me a line!</h5>
           <div className="FormContact__form-group">
             <input
               className="FormContact__input"

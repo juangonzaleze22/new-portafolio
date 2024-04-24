@@ -1,67 +1,65 @@
 .Card {
-    width: auto;
-    background-color: var(--background-card);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transition: all .3s ease-in-out;
-    padding: 1rem 1.5rem;
-    border-radius: var(--border-radius);
-    color: #fff;
-    backdrop-filter: blur(22px);
-    cursor: initial;
-    user-select: none;
-
+  width: auto;
+  background-color: var(--background-card);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  color: #fff;
+  backdrop-filter: blur(22px);
+  cursor: initial;
+  user-select: none;
 }
 
 .Card__content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .Card__img {
-    width: 30px;
-    height: auto;
-    filter: brightness(0.95);
-    transition: .3s ease-in-out opacity;
+  width: 26px;
+  height: auto;
+  filter: brightness(0.95);
+  transition: 0.3s ease-in-out opacity;
 }
 
 .Card__title {
-    font-family: var(--font-roboto);
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: .3s ease-in-out;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.16s ease-in-out;
 }
 
 .Card:hover {
-    transform: scale(.95);
+  transform: scale(1.05);
 }
 
 .Card:hover .Card__img {
-    opacity: 1;
-    filter: none;
+  opacity: 1;
+  filter: none;
 }
 
 .Card:hover .Card__title {
-    color: var(--color-white);
-    font-weight: 600;
+  color: var(--color-white);
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1024px) {
-    .Card {
-        padding: 15px;
-    }
+  .Card {
+    padding: 15px;
+  }
 
-    .Card__img {
-        width: 40px;
-    }
+  .Card__img {
+    width: 40px;
+  }
 
-    .Card__title {
-        font-size: 12px;
-        margin-top: 5px;
-    }
-
+  .Card__title {
+    font-size: 12px;
+    margin-top: 5px;
+  }
 }

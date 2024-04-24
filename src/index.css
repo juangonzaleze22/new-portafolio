@@ -1,9 +1,9 @@
 /* fonst */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
-  --color-primary: #0E46A3;
+  --color-primary: #0e46a3;
   --color-secondary: #3c5c74;
   --color-gray: #968285;
   --color-white: #fff;
@@ -52,8 +52,8 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: radial-gradient(circle at top right, #1B3C59, #000000),
-    radial-gradient(circle at bottom left, #1B3C59, #000000);
+  background-image: radial-gradient(circle at top right, #1b3c59, #000000),
+    radial-gradient(circle at bottom left, #1b3c59, #000000);
   z-index: -200;
 }
 
@@ -89,14 +89,11 @@ body {
   display: none !important;
 }
 
-
-
 .centerContainColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .section.active .TitleSection::after {
   transform: translateX(0);
@@ -120,7 +117,6 @@ body {
   border-radius: 3px !important;
   width: 44px !important;
   background-color: var(--color-white) !important;
-
 }
 
 #fp-nav ul li,
@@ -140,17 +136,13 @@ body {
 }
 
 @media (max-width: 570px) {
-
   .centerContainColumn {
     justify-content: start;
   }
-
 }
 
 @media (max-width: 570px) {
-
   .space-section-top {
     padding-top: 70px !important;
   }
-
 }
