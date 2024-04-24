@@ -1,6 +1,8 @@
 import React from 'react'
+import banner from '../../assets/vector/banner-image.svg'
 import SocialButtons from '../../components/SocialButtons/SocialButtons'
 import './Home.css'
+
 
 
 export const Home = () => {
@@ -16,7 +18,7 @@ export const Home = () => {
           <SocialButtons />
         </h2>
       </div>
-      {/*   <img className='img-fluid home__image' src={imgProfile} alt='' /> */}
+        <img className='img-fluid home__image' src={banner} alt='' />
     </div>
   )
 }
