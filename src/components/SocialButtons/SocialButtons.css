@@ -1,27 +1,31 @@
 .SocialButton {
-    display: flex;
-    gap: .5rem;
-    margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
 .SocialButton a {
-    color: var(--color-white);
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 4px;
-    transition: all .3s ease-in-out;
-    background-color: var(--background-card);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--background-card);
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .SocialButton a i {
-    font-size: 22px;
-    color: var(--color-white);
+  font-size: 22px;
+  color: var(--color-white);
 }
 
 .SocialButton a:hover {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .SocialButton a:hover i {
-    color: var(--color-white);
+  color: var(--color-white);
 }

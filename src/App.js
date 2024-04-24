@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Navbar } from './components/Navbar/Navbar';
 import { Contact } from './pages/Contact/Contact';
@@ -10,15 +10,15 @@ import { Skill } from './pages/Skill/Skill';
 /* Context */
 
 export const App = () => {
-  const [transform, setTransform] = useState()
+  /* const [transform, setTransform] = useState() */
 
-  const parallax = (e) => {
+ /*  const parallax = (e) => {
     const x = window.innerWidth - e.pageX
     const y = window.innerHeight - e.pageY
     setTransform(`translate(${x / 20}px, ${y / 20}px)`)
-  }
+  } */
   return (
-    <div onMouseMove={parallax}>
+    <div>
       <Navbar />
       <ReactFullpage
         //fullpage options

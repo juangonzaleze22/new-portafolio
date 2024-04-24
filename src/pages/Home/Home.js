@@ -10,13 +10,12 @@ export const Home = () => {
         <h2 className='textContent__title'>
           <span className='textContent__title textContent__title--big'>Juan Gonzalez</span>
           <p className='textContent__description'>
-            Soy un desarrollador frontend apasionado con más de 5 años de experiencia en la creación de interfaces de usuario interactivas y eficientes. Mi experiencia abarca trabajar con una variedad de tecnologías.
+          I am a passionate frontend developer with over five years of experience in crafting interactive and efficient user interfaces. My expertise spans a diverse array of technologies, enabling me to deliver cutting-edge solutions. I thrive on innovation and am committed to elevating user experience to new heights.
           </p>
           <p className='textContent__subtitle'>Frontend Developer</p>
           <SocialButtons />
         </h2>
       </div>
-      {/*   <img className='img-fluid home__image' src={imgProfile} alt='' /> */}
     </div>
   )
 }

@@ -6,9 +6,26 @@ export const Navbar = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    const bodyClases = document.body.className;
-    setScroll(!bodyClases.includes('fp-viewing-0'));
-  }, [document.body.className]);
+    // Función que maneja los cambios observados
+    const handleMutation = (mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          const currentClass = mutation.target.className;
+          // Aquí puedes verificar si la clase específica se ha agregado y actuar en consecuencia
+          setScroll(currentClass.includes('fp-viewing-2'));
+        }
+      });
+    };
+
+    // Crear una instancia de MutationObserver
+    const observer = new MutationObserver(handleMutation);
+
+    // Configurar el observador para el elemento body y el atributo class
+    observer.observe(document.body, { attributes: true });
+
+    // Asegúrate de desconectar el observador cuando el componente se desmonte
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className={`container navbar ${scroll ? 'blur' : ''}`}>
