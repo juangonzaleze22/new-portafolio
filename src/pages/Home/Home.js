@@ -1,5 +1,7 @@
 import React from 'react'
 import SocialButtons from '../../components/SocialButtons/SocialButtons'
+import BannerImg from '../../assets/vector/banner-image.svg'
+
 import './Home.css'
 
 
@@ -10,12 +12,13 @@ export const Home = () => {
         <h2 className='textContent__title'>
           <span className='textContent__title textContent__title--big'>Juan Gonzalez</span>
           <p className='textContent__description'>
-          I am a passionate frontend developer with over five years of experience in crafting interactive and efficient user interfaces. My expertise spans a diverse array of technologies, enabling me to deliver cutting-edge solutions. I thrive on innovation and am committed to elevating user experience to new heights.
+          I am a passionate frontend developer with over five years of experience in crafting interactive and efficient user interfaces.
           </p>
           <p className='textContent__subtitle'>Frontend Developer</p>
           <SocialButtons />
         </h2>
       </div>
+      <img className='home__image' src={BannerImg} alt="Banner image" width="320"/>
     </div>
   )
 }

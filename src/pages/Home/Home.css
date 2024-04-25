@@ -9,9 +9,10 @@
 .home__image {
   animation-timing-function: ease-in-out;
   aspect-ratio: 1 / 1;
-  border-radius: 20px;
-  width: 180px;
-  margin-left: 100px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 
 .textContent {
@@ -69,39 +70,25 @@
   margin-top: 1rem;
 }
 
-@media screen and (max-width: 1024px) {
-  .textContent {
-    margin-bottom: 30px;
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
   }
-
-  .textContent__title {
-    font-size: 5rem;
+  50% {
+    transform: translate(0, 15px);
   }
-
-  .home__image {
-    margin: 25px auto;
-    max-width: 350px;
+  100% {
+    transform: translate(0, -0px);
   }
 }
 
 @media screen and (max-width: 767px) {
-  .textContent {
-    margin-bottom: 30px;
+  .home__image {
+    display: none;
   }
 
   .textContent__title {
-    font-size: 3rem;
-  }
-
-  .home__image {
-    margin: 25px auto;
-    max-width: 270px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .home {
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
   }
 }

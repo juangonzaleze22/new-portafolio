@@ -5,7 +5,7 @@
   align-items: center;
   text-align: center;
   transition: all 0.3s ease-in-out;
-  padding: 1rem 1.5rem;
+  padding: 0.875rem 1.5rem;
   border-radius: var(--border-radius);
   color: #fff;
   backdrop-filter: blur(22px);
@@ -21,7 +21,7 @@
 }
 
 .Card__img {
-  width: 26px;
+  width: 1.625rem;
   height: auto;
   filter: brightness(0.95);
   transition: 0.3s ease-in-out opacity;
@@ -29,7 +29,7 @@
 
 .Card__title {
   font-family: var(--font-roboto);
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
   transition: 0.16s ease-in-out;
@@ -49,17 +49,5 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 1024px) {
-  .Card {
-    padding: 15px;
-  }
-
-  .Card__img {
-    width: 40px;
-  }
-
-  .Card__title {
-    font-size: 12px;
-    margin-top: 5px;
-  }
+@media screen and (max-width: 767px) {
 }
