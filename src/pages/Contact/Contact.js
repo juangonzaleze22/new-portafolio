@@ -14,8 +14,6 @@ export const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  console.log(" process.env",  process.env)
-
 
   const onSubmit = async values => {
     setLoading(true);
