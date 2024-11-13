@@ -11,12 +11,13 @@ import ImgEmetBG from "../assets/portfolio/img-emetbg.png";
 import ImgEstimatu from "../assets/portfolio/img-estimatu.png";
 import ImgImpromine from "../assets/portfolio/img-impromine.png";
 import ImgIolsi from "../assets/portfolio/img-iolsi.png";
+import IMGLobosondaPhotos from "../assets/portfolio/img-lobosonda-photos.png";
+import IMGLobosondaUser from "../assets/portfolio/img-lobosondap-app.png";
 import ImgNotaria from "../assets/portfolio/img-notaria.png";
 import ImgLibray from "../assets/portfolio/library.png";
 import ImgSpiffyApp from "../assets/portfolio/spiffyApp.png";
 import ImgSpiffyProApp from "../assets/portfolio/spiffyProApp.png";
 import ImgXYES from "../assets/portfolio/xyes.png";
-
 
 export const MOCK_PORTFOLIO = [
     {
@@ -50,6 +51,20 @@ export const MOCK_PORTFOLIO = [
       img: ImgXYES,
       link: "https://xyes.com/es",
       skills: ["React", "Next", "TypeScript", "Styled-component", "React-query", "Redux"],
+    },
+    {
+      title: "Lobosonda Photo",
+      description:"This platform allows you to find images related to your adventures and acquire them easily",
+      img: IMGLobosondaUser,
+      link: "https://lobosondaphotos-dev.web.app/",
+      skills: ["Angular", "SASS", "TypeScript", "Rxjs", "Bootstrap"],
+    },
+    {
+      title: "Lobosonda Photo CRM",
+      description:"Lobosonda is a CRM system designed for efficient management and administration of a website. It centralizes customer data, tracks sales and automates processes related to the user experience on the site.",
+      img: IMGLobosondaPhotos,
+      link: "https://lobosondaphotosuser-dev.web.app/",
+      skills: ["Angular", "SASS", "TypeScript", "Rxjs", "Bootstrap", " Firebase"],
     },
     {
       title: "Estimatu",
