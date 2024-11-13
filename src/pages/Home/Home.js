@@ -1,6 +1,7 @@
 import React from 'react'
 import banner from '../../assets/vector/banner-image.svg'
 import SocialButtons from '../../components/SocialButtons/SocialButtons'
+
 import './Home.css'
 
 

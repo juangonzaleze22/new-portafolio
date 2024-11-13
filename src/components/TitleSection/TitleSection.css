@@ -2,10 +2,10 @@
   color: #fff;
   text-align: center;
   font-family: var(--font-montserrat);
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 .TitleSection::after {
@@ -22,5 +22,6 @@
 @media (max-width: 575px) {
   .TitleSection {
     font-size: 26px;
+    margin-bottom: 2rem;
   }
 }

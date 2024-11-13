@@ -48,6 +48,10 @@ body {
   width: 100%;
 }
 
+.container-navbar {
+  width: calc(100% - 1rem);
+}
+
 .sky-color {
   position: fixed;
   width: 100%;
@@ -117,23 +121,23 @@ body {
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   border-radius: 3px !important;
-  width: 44px !important;
+  width: 2.75rem !important;
   background-color: var(--color-white) !important;
 }
 
 #fp-nav ul li,
 .fp-slidesNav ul li {
   color: var(--color-white) !important;
-  width: 44px !important;
+  width: 2.75rem !important;
 }
 
 #fp-nav ul li a.active span {
   background: var(--color-secondary) !important;
-  height: 9px !important;
+  height: 0.5625rem !important;
 }
 
 .fp-tooltip {
-  margin-left: 17.5px !important;
+  margin-left: 1.0938rem !important;
   margin-top: -30px;
 }
 
@@ -145,7 +149,13 @@ body {
 
 @media (max-width: 570px) {
   .space-section-top {
-    padding-top: 70px !important;
+    padding-top: 4.375rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
   }
 
   html {

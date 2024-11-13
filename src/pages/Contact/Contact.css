@@ -10,7 +10,7 @@
 }
 
 .BoxInfo {
-  padding: 35px 30px;
+  padding: 2.1875rem 1.875rem;
   display: flex;
   flex-direction: column;
 }
@@ -227,11 +227,21 @@
 
 @media (max-width: 768px) {
   .BoxContact {
-    margin-top: 100px;
-    box-shadow: none;
-    overflow: initial;
+    grid-template-columns: 1fr;
   }
 
+  .BoxInfo {
+    padding: 0 0 3rem;
+  }
+
+  .FormContact {
+    padding: 1.5rem 1rem;
+  }
+
+  .FormContact__btn {
+    margin: 0 auto;
+  }
+  /*
   .FormContact .TitleSection {
     display: block !important;
     position: absolute;
@@ -254,12 +264,15 @@
 
   .BoxContact {
     grid-template-columns: 1fr;
-  }
+  } */
 }
 
-@media (max-width: 992px) {
-  .FormContact,
+@media (max-width: 576px) {
+  /* .FormContact,
   .BoxInfo {
     padding: 25px;
+  } */
+  .BoxInfo__footer h5 {
+    margin: auto;
   }
 }
