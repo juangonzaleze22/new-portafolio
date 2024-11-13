@@ -40,7 +40,7 @@ export const MOCK_PORTFOLIO = [
         description:
           "E-commerce development",
         img: ImgAlianza,
-        link: "ttps://alianzaaruba.com/",
+        link: "https://alianzaaruba.com/",
         skills: ["Angular", "TypeScript", "Sass"],
     },
     {

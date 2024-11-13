@@ -5,7 +5,7 @@
 
 .GallerySection__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13.75rem, 1fr));
   gap: 1rem;
 }
 
