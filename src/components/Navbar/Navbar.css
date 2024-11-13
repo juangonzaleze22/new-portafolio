@@ -1,63 +1,63 @@
 .navbar {
-  padding: 20px 30px !important;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  position: fixed;
-  top: 10px;
-  left: 0;
-  right: 0;
-  transition: all 0.16s ease-in-out;
+    padding: 20px 30px !important;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    transition: all .16s ease-in-out;
 }
 
 .navbar.blur {
-  background-color: var(--background-card);
-  border-radius: 25px;
-  backdrop-filter: blur(20px);
+    background-color: var(--background-card);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
 }
 
 .navbar__NavbarBrand {
-  color: var(--color-white);
-  text-transform: uppercase;
-  font-family: var(--font-roboto);
-  letter-spacing: 1.5px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-family: var(--font-roboto);
+    letter-spacing: 1.5px;
 }
 
 .navbar__social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar__social a {
-  margin: 0 10px;
-  color: var(--color-white);
-  text-decoration: none;
+    margin: 0 10px;
+    color: var(--color-white);
+    text-decoration: none;
 }
 
 .navbar__social a i {
-  font-size: 26px;
-  color: var(--color-white);
-  transition: all 0.3s ease-in-out;
+    font-size: 26px;
+    color: var(--color-white);
+    transition: all .3s ease-in-out;
 }
 
 .navbar__social a i:hover {
-  color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
 @media (max-width: 575px) {
-  .navbar__NavbarBrand {
-    font-size: 14px;
-  }
+    .navbar__NavbarBrand {
+        font-size: 14px;
+    }
 
-  .navbar__social a {
-    font-size: 16px;
-    margin: 0 5px;
-  }
+    .navbar__social a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
 
-  .navbar__social a i {
-    font-size: 20px;
-  }
+    .navbar__social a i {
+        font-size: 20px;
+    }
 }

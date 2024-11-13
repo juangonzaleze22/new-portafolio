@@ -75,7 +75,11 @@
     }
 
     .textContent__title {
-        font-size: 5rem;
+        font-size: 2rem;
+    }
+
+    .textContent__subtitle {
+        font-size: 1.5rem;
     }
 
     .home__image {
@@ -89,15 +93,12 @@
         margin-bottom: 30px;
     }
 
-    .textContent__title {
-        font-size: 3rem;
-    }
-
     .home__image {
-        margin: 25px auto;
-        max-width: 270px;
+        display: none;
     }
 }
+
+
 
 @media screen and (max-width: 575px) {
     .home {

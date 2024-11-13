@@ -17,6 +17,7 @@ import ImgMysql from '../../assets/skills/bxl-mysql.svg'
 import ImgNode from '../../assets/skills/bxl-nodejs.svg'
 import ImgPhp from '../../assets/skills/bxl-php.svg'
 import ImgSass from '../../assets/skills/bxl-sass.svg'
+import ImgTypescript from '../../assets/skills/bxl-typescript.svg'
 
 
 import './Skill.css'
@@ -34,6 +35,10 @@ export const Skill = () => {
     {
       title: 'Javascript',
       src: ImgJs
+    },
+    {
+      title: 'Typescript',
+      src: ImgTypescript
     },
     {
       title: 'Angular',

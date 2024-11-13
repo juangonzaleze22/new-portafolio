@@ -1,4 +1,3 @@
-import ReactFullpage from '@fullpage/react-fullpage';
 import React from 'react';
 
 import { Navbar } from './components/Navbar/Navbar';
@@ -20,35 +19,18 @@ export const App = () => {
   return (
     <div>
       <Navbar />
-      <ReactFullpage
-        //fullpage options
-        licenseKey='OPEN-SOURCE-GPLV3-LICENSE'
-        scrollingSpeed={850}
-        controlArrows={false}
-        navigation={true}
-        navigationPosition={'right'}
-        navigationTooltips={['Home', 'Skills', 'Portfolio', 'Contact']}
-        keyboardScrolling={true}
-        render={({ state, fullpageApi }) => {
-
-          return (
-            <ReactFullpage.Wrapper>
-              <div className="section">
-                <Home />
-              </div>
-              <div className="section">
-                <Skill />
-              </div>
-              <div className="section">
-                <Gallery />
-              </div>
-              <div className="section">
-                <Contact />
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+      <section className="section">
+        <Home />
+      </section>
+      <section className="section">
+        <Skill />
+      </section>
+      <section className="section">
+        <Gallery />
+      </section>
+      <section className="section">
+        <Contact />
+      </section>
       {/*  <div className='moonlight'>
         <div className='layer moonlight__img' style={{ 'transform': transform }}></div>
       </div> */}

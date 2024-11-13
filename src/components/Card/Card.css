@@ -51,11 +51,11 @@
 
 @media screen and (max-width: 1024px) {
   .Card {
-    padding: 15px;
+    padding: 0.9375rem;
   }
 
   .Card__img {
-    width: 40px;
+    width: 2.5rem;
   }
 
   .Card__title {

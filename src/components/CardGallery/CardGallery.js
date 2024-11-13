@@ -48,6 +48,7 @@ export const CardGallery = ({ src, title, description, link, skills }) => {
               target="_blank"
               className="CardGallery__link"
               rel="noreferrer"
+              disabled={link}
             >
               Visit
             </a>

@@ -14,9 +14,6 @@ export const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  console.log(" process.env",  process.env)
-
-
   const onSubmit = async values => {
     setLoading(true);
 
@@ -63,7 +60,7 @@ export const Contact = () => {
             </li>
             <li>
               <i className="bx bx-map"></i>
-              <a href="https://www.google.com/maps/place/Venezuela" target="_blank">
+              <a href="https://www.google.com/maps/place/Venezuela" target="_blank" rel="noreferrer">
                 Venezuela
               </a>
             </li>
@@ -72,36 +69,6 @@ export const Contact = () => {
               <a href="tel:+584145757263">(+58) 414-5757263</a>
             </li>
           </ul>
-          {/* <div className="BoxInfo__Social">
-            <a
-              href="https://www.linkedin.com/in/juan-gonzalez-a77b93158/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="bx bxl-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/juangonzaleze22"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="bx bxl-github"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/juangonzaleze/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="bx bxl-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=765667497"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="bx bxl-facebook"></i>
-            </a>
-          </div> */}
           <div className="BoxInfo__footer">
             <h5>Copyright © 2022 All Rights Reserved</h5>
           </div>
