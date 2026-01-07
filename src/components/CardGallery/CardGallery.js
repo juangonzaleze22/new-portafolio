@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./CardGallery.css";
 
-export const CardGallery = ({ src, title, description, link, skills }) => {
+export const CardGallery = ({ src, title, description, link, skills, index = 0 }) => {
+  const { t } = useTranslation();
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const animationDelay = index * 0.05;
+
   return (
-    <div className="CardGallery">
+    <div 
+      className="CardGallery"
+      style={{ '--animation-delay': `${animationDelay}s` }}
+    >
       <div className="CardGallery__content">
-        <img className="CardGallery__img" src={src} alt="" />
+        <div className="CardGallery__img-wrapper">
+          {!imageLoaded && <div className="CardGallery__img-placeholder"></div>}
+          <img 
+            className={`CardGallery__img ${imageLoaded ? 'loaded' : ''}`}
+            src={src} 
+            alt={title}
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+          />
+        </div>
         <div className="CardGallery__body">
           <h3 className="CardGallery__title">{title}</h3>
           <div className="CardGallery__description">
@@ -30,7 +47,7 @@ export const CardGallery = ({ src, title, description, link, skills }) => {
                   className="CardGallery__link"
                   rel="noreferrer"
                 >
-                  Android
+                  {t('gallery.buttonAndroid')}
                 </a>
                 <a
                   href={link[1]}
@@ -38,7 +55,7 @@ export const CardGallery = ({ src, title, description, link, skills }) => {
                   className="CardGallery__link"
                   rel="noreferrer"
                 >
-                  Ios
+                  {t('gallery.buttonIos')}
                 </a>
               </div>
             </>
@@ -50,7 +67,7 @@ export const CardGallery = ({ src, title, description, link, skills }) => {
               rel="noreferrer"
               disabled={link}
             >
-              Visit
+              {t('gallery.buttonVisit')}
             </a>
           )}
         </div>

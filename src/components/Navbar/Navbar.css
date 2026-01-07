@@ -13,33 +13,51 @@
 }
 
 .navbar.blur {
-    background-color: var(--background-card);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 25px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .navbar.blur {
+    background-color: rgba(36, 36, 36, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .navbar__NavbarBrand {
-    color: var(--color-white);
+    color: var(--color-black);
     text-transform: uppercase;
     font-family: var(--font-roboto);
     letter-spacing: 1.5px;
+}
+
+.navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar__social {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0;
 }
 
 .navbar__social a {
     margin: 0 10px;
-    color: var(--color-white);
+    color: var(--color-black);
     text-decoration: none;
+}
+
+.navbar__social a:last-of-type {
+    margin-right: 0;
 }
 
 .navbar__social a i {
     font-size: 26px;
-    color: var(--color-white);
+    color: var(--color-black);
     transition: all .3s ease-in-out;
 }
 

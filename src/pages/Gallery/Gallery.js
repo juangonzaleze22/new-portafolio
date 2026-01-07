@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { CardGallery } from "../../components/CardGallery/CardGallery";
 import { TitleSection } from "../../components/TitleSection/TitleSection";
 import { MOCK_PORTFOLIO } from "../../consts/portfolio";
@@ -6,9 +7,19 @@ import { MOCK_PORTFOLIO } from "../../consts/portfolio";
 import "./Gallery.css";
 
 export const Gallery = () => {
+  const { t } = useTranslation();
   const [selectedFilter, setSelectedFilter] = useState("All"); 
 
-  const skills = ["All", "Angular", "Vue", "React", "Ionic"]
+  const skills = ["All", "Angular", "Vue", "React", "Ionic"];
+
+  const getFilterLabel = (skill) => {
+    if (skill === "All") return t('gallery.filterAll');
+    if (skill === "Angular") return t('gallery.filterAngular');
+    if (skill === "Vue") return t('gallery.filterVue');
+    if (skill === "React") return t('gallery.filterReact');
+    if (skill === "Ionic") return t('gallery.filterIonic');
+    return skill;
+  };
 
   const filteredPortfolio = () => {
     if (selectedFilter === "All") {
@@ -24,7 +35,7 @@ export const Gallery = () => {
 
   return (
     <div className="container space-section-top GallerySection ">
-      <TitleSection title="Portfolio" />
+      <TitleSection title={t('gallery.title')} />
       <div className="GallerySection__filters">
         {
           skills && skills.map((skill, index) => { 
@@ -37,7 +48,7 @@ export const Gallery = () => {
                 }`}
                 onClick={handleFilterChange}
               >
-                {skill}
+                {getFilterLabel(skill)}
               </button>
             )
           })
@@ -53,6 +64,7 @@ export const Gallery = () => {
               description={item.description}
               link={item.link}
               skills={item.skills}
+              index={index}
             />
           );
         })}

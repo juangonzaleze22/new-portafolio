@@ -1,11 +1,21 @@
+.SkillSection {
+    position: relative;
+}
+
 .SkillSection__grid {
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
-    gap: 15px;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1rem 0;
 }
 
 @media (max-width: 767px) {
+    .SkillSection {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+    }
+
     .SkillSection__grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));

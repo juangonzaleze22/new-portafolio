@@ -1,0 +1,86 @@
+.ThemeToggle {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 20px rgba(14, 70, 163, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .ThemeToggle {
+  box-shadow: 0 4px 20px rgba(74, 158, 255, 0.5), 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .ThemeToggle:hover {
+  box-shadow: 0 8px 30px rgba(74, 158, 255, 0.6), 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.ThemeToggle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ThemeToggle:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.ThemeToggle:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 30px rgba(14, 70, 163, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ThemeToggle:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.ThemeToggle i {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ThemeToggle:hover i {
+  transform: rotate(20deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .ThemeToggle {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ThemeToggle {
+    width: 48px;
+    height: 48px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 20px;
+  }
+}
+

@@ -1,0 +1,45 @@
+{
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+  "home": {
+    "subtitle": "Desarrollador Frontend",
+    "description": "Soy un desarrollador frontend apasionado con más de cinco años de experiencia creando interfaces de usuario interactivas y eficientes."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "filterAll": "Todas"
+  },
+  "gallery": {
+    "title": "Portafolio",
+    "filterAll": "Todas",
+    "filterAngular": "Angular",
+    "filterVue": "Vue",
+    "filterReact": "React",
+    "filterIonic": "Ionic",
+    "buttonVisit": "Visitar",
+    "buttonAndroid": "Android",
+    "buttonIos": "iOS"
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¡Escríbeme!",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "errors": {
+      "nameRequired": "El nombre es requerido",
+      "emailRequired": "El correo electrónico es requerido",
+      "emailInvalid": "El correo electrónico no es válido",
+      "messageRequired": "El mensaje es requerido"
+    },
+    "alerts": {
+      "success": "Mensaje enviado exitosamente",
+      "error": "No se pudo enviar el mensaje. Por favor, intenta de nuevo más tarde."
+    },
+    "copyright": "Copyright © 2026 Todos los derechos reservados"
+  }
+}
+

@@ -16,6 +16,16 @@
   --border-radius: 4px;
 }
 
+[data-theme="dark"] {
+  --color-primary: #5ba3ff;
+  --color-secondary: #7a9fb3;
+  --color-gray: #a8a8a8;
+  --color-white: #1e1e1e;
+  --color-description: #a8a8a89a;
+  --color-black: #ffffff;
+  --background-card: rgba(255, 255, 255, 0.08);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +38,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-gray);
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
 }
 
 .section {
@@ -36,13 +52,38 @@ body {
  padding-bottom: 70px;
 }
 
+.section:nth-child(even) {
+  background-color: var(--color-white);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .section:nth-child(even) {
+  background-color: #242424;
+}
+
+.section:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .section:nth-child(even)::before {
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
 .section.home .container {
   display: flex;
   align-items: center;
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1144px;
   margin: 0 auto;
   padding: 0 30px;
   width: 100%;
@@ -58,9 +99,15 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  background-image: radial-gradient(circle at top right, #1b3c59, #000000),
-    radial-gradient(circle at bottom left, #1b3c59, #000000);
+  background-image: radial-gradient(circle at top right, #e8f4f8, #f5f5f5),
+    radial-gradient(circle at bottom left, #e8f4f8, #f5f5f5);
   z-index: -200;
+  transition: background-image 0.3s ease;
+}
+
+[data-theme="dark"] .sky-color {
+  background-image: radial-gradient(circle at top right, #2a2a2a, #1a1a1a),
+    radial-gradient(circle at bottom left, #2d2d2d, #1a1a1a);
 }
 
 .moon-background {
@@ -122,12 +169,12 @@ body {
 .fp-slidesNav ul li a span {
   border-radius: 3px !important;
   width: 2.75rem !important;
-  background-color: var(--color-white) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
 #fp-nav ul li,
 .fp-slidesNav ul li {
-  color: var(--color-white) !important;
+  color: var(--color-black) !important;
   width: 2.75rem !important;
 }
 

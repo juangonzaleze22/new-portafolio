@@ -1,5 +1,5 @@
 .TitleSection {
-  color: #fff;
+  color: var(--color-black);
   text-align: center;
   font-family: var(--font-montserrat);
   font-size: 2rem;

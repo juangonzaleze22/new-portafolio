@@ -1,16 +1,43 @@
 .Card {
   width: auto;
-  background-color: var(--background-card);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
   display: flex;
   align-items: center;
   text-align: center;
-  transition: all 0.3s ease-in-out;
-  padding: 0.875rem 1.5rem;
-  border-radius: var(--border-radius);
-  color: #fff;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  color: var(--color-black);
   backdrop-filter: blur(22px);
-  cursor: initial;
+  cursor: pointer;
   user-select: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease-out backwards;
+  animation-delay: var(--animation-delay, 0s);
+}
+
+[data-theme="dark"] .Card {
+  background: linear-gradient(135deg, rgba(36, 36, 36, 0.95) 0%, rgba(40, 40, 40, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.Card:hover::before {
+  left: 100%;
 }
 
 .Card__content {
@@ -21,33 +48,59 @@
 }
 
 .Card__img {
-  width: 1.625rem;
+  width: 2rem;
   height: auto;
-  filter: brightness(0.95);
-  transition: 0.3s ease-in-out opacity;
+  filter: brightness(0.9) saturate(1.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(1);
 }
 
 .Card__title {
   font-family: var(--font-roboto);
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  font-weight: 500;
-  transition: 0.16s ease-in-out;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
 }
 
 .Card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(14, 70, 163, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(240, 245, 255, 0.95) 100%);
+  border-color: rgba(14, 70, 163, 0.2);
+}
+
+[data-theme="dark"] .Card:hover {
+  background: linear-gradient(135deg, rgba(45, 45, 45, 1) 0%, rgba(50, 55, 65, 0.95) 100%);
+  box-shadow: 0 12px 24px rgba(91, 163, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: rgba(91, 163, 255, 0.3);
 }
 
 .Card:hover .Card__img {
-  opacity: 1;
-  filter: none;
+  filter: brightness(1.1) saturate(1.3);
+  transform: scale(1.15) rotate(5deg);
 }
 
 .Card:hover .Card__title {
-  color: var(--color-white);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: 700;
+  transform: translateX(4px);
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @media screen and (max-width: 1024px) {
   .Card {

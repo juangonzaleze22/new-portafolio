@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Navbar } from './components/Navbar/Navbar';
+import { ThemeToggle } from './components/ThemeToggle/ThemeToggle';
 import { Contact } from './pages/Contact/Contact';
 import { Gallery } from './pages/Gallery/Gallery';
 import { Home } from './pages/Home/Home';
@@ -19,6 +20,7 @@ export const App = () => {
   return (
     <div>
       <Navbar />
+      <ThemeToggle />
       <section className="section">
         <Home />
       </section>

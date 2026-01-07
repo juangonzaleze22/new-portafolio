@@ -4,13 +4,23 @@ import "./Card.css"
 
 export const Card = ({
     title,
-    src
+    src,
+    index = 0
 }) => {
+  const animationDelay = index * 0.05;
+  
   return (
-    <div className='Card'>
+    <div 
+      className='Card'
+      style={{ '--animation-delay': `${animationDelay}s` }}
+    >
         <div className='Card__content'>
-            <img className='img-fluid Card__img' src={src} alt="" />
-            <h2 className='Card__title'>{title}</h2>
+          {
+            src && (
+              <img className='img-fluid Card__img' src={src} alt="" />
+            )
+          }
+          <h2 className='Card__title'>{title}</h2>
         </div>
     </div>
   )

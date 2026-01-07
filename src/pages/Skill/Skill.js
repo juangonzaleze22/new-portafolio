@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Card } from '../../components/Card/Card'
 import { TitleSection } from '../../components/TitleSection/TitleSection'
 
@@ -18,11 +19,16 @@ import ImgReact from '../../assets/skills/bxl-react.svg'
 import ImgSass from '../../assets/skills/bxl-sass.svg'
 import ImgTypescript from '../../assets/skills/bxl-typescript.svg'
 import ImgVue from '../../assets/skills/bxl-vuejs.svg'
+import ImgJest from '../../assets/skills/bxl-jest.svg'
+import ImgKarma from '../../assets/skills/bxl-karma.svg'
+import ImgMarkdown from '../../assets/skills/bxl-markdown.svg'
 
 
 import './Skill.css'
 
 export const Skill = () => {
+  const { t } = useTranslation();
+  
   const skills = [
     {
       title: 'HTML',
@@ -69,6 +75,14 @@ export const Skill = () => {
       src: ImgNode
     },
     {
+      title: 'Jest',
+      src: ImgJest
+    },
+    {
+      title: 'Karma',
+      src: ImgKarma
+    },
+    {
       title: 'PHP',
       src: ImgPhp
     },
@@ -84,16 +98,23 @@ export const Skill = () => {
       title: 'Git',
       src: ImgGithub
     },
+    {
+      title: 'Agent Context',
+      src: ImgMarkdown
+    },
+    {
+      title: 'Model Context Protocol (MCP)',
+    },
   ]
 
   return (
     <div className='container SkillSection space-section-top centerContainColumn'>
-      <TitleSection title='Skills' />
+      <TitleSection title={t('skills.title')} />
       <div className='SkillSection__grid'>
         {
           skills.map((skill, index) => {
             return (
-              <Card key={index} title={skill.title} src={skill.src} />
+              <Card key={index} title={skill.title} src={skill.src} index={index} />
             )
           })
         }
