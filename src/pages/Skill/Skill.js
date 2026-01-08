@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Card } from '../../components/Card/Card'
 import { TitleSection } from '../../components/TitleSection/TitleSection'
-
-/* image skills */
 import ImgAngular from '../../assets/skills/bxl-angular.svg'
 import ImgBootstrap from '../../assets/skills/bxl-bootstrap.svg'
 import ImgCss from '../../assets/skills/bxl-css3.svg'
@@ -22,9 +22,10 @@ import ImgVue from '../../assets/skills/bxl-vuejs.svg'
 import ImgJest from '../../assets/skills/bxl-jest.svg'
 import ImgKarma from '../../assets/skills/bxl-karma.svg'
 import ImgMarkdown from '../../assets/skills/bxl-markdown.svg'
-
-
+import ImgTailwind from '../../assets/skills/bxl-tailwind.svg'
 import './Skill.css'
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Skill = () => {
   const { t } = useTranslation();
@@ -61,6 +62,10 @@ export const Skill = () => {
     {
       title: 'Ionic',
       src: ImgIonic
+    },
+    {
+      title: 'Tailwind',
+      src: ImgTailwind
     },
     {
       title: 'SASS',
@@ -107,10 +112,51 @@ export const Skill = () => {
     },
   ]
 
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const gridElement = gridRef.current;
+    if (!gridElement) return;
+
+    const cards = gridElement.children;
+    if (!cards || cards.length === 0) return;
+
+    // Establecer estados iniciales
+    gsap.set(cards, {
+      y: 50,
+      opacity: 0,
+      scale: 0.8
+    });
+
+    const animation = gsap.to(cards, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 0.6,
+      stagger: 0.05,
+      ease: 'back.out(1.7)',
+      scrollTrigger: {
+        trigger: gridElement,
+        start: 'top 75%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    return () => {
+      if (animation) animation.kill();
+      const triggers = ScrollTrigger.getAll();
+      triggers.forEach(trigger => {
+        if (trigger.trigger === gridElement) {
+          trigger.kill();
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className='container SkillSection space-section-top centerContainColumn'>
       <TitleSection title={t('skills.title')} />
-      <div className='SkillSection__grid'>
+      <div ref={gridRef} className='SkillSection__grid'>
         {
           skills.map((skill, index) => {
             return (

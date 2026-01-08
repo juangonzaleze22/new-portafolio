@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { gsap } from 'gsap';
 import { LanguageSelector } from '../LanguageSelector/LanguageSelector';
 import "./Navbar.css";
 
 export const Navbar = () => {
 
   const [scroll, setScroll] = useState(false);
+  const navbarRef = useRef(null);
+  const brandRef = useRef(null);
+  const socialRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,16 +18,37 @@ export const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Animación de entrada
+    if (brandRef.current) {
+      gsap.from(brandRef.current, {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+      });
+    }
+
+    if (socialRef.current && socialRef.current.children) {
+      gsap.from(socialRef.current.children, {
+        y: -20,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: 'power3.out',
+        delay: 0.3
+      });
+    }
+
     return () => window.removeEventListener('scroll', handleScroll); 
   }, []);
 
   return (
-    <header className={`navbar container ${scroll ? 'blur' : ''}`}>
-      <h3 className='navbar__NavbarBrand'>Juan Gonzalez</h3>
+    <header ref={navbarRef} className={`navbar container ${scroll ? 'blur' : ''}`}>
+      <h3 ref={brandRef} className='navbar__NavbarBrand'>Juan Gonzalez</h3>
 
       <div className='navbar__right'>
       
-        <div className='navbar__social'>
+        <div ref={socialRef} className='navbar__social'>
           <a href='https://www.linkedin.com/in/juan-gonzalez-a77b93158/' target='_blank' rel="noreferrer">
             <i className='bx bxl-linkedin' ></i>
           </a>
